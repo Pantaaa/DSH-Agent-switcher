@@ -1,0 +1,43 @@
+{
+  "name": "dsh-agent-switcher",
+  "version": "1.0.0",
+  "description": "In-session Agent (preset) switcher for DeepSeek Harness — a composer-row chip beside the model selector with force recompose for started sessions and historical tool-call compatibility views.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-api-remotes"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "agent",
+    "preset",
+    "plugin",
+    "cordis"
+  ],
+  "license": "MIT",
+  "author": "",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=22.10.0"
+  }
+}
